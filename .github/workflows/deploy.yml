@@ -15,17 +15,14 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.27.1'
+        flutter-version: '3.16.9'
         channel: 'stable'
         
     - name: Install dependencies
-      run: |
-        flutter pub get
-        flutter doctor
+      run: flutter pub get
         
     - name: Build web
-      run: |
-        flutter build web --release --web-renderer html
+      run: flutter build web --release
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -33,4 +30,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/web
-        cname: # Deixe vazio para usar o domínio padrão
