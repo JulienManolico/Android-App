@@ -19,13 +19,18 @@ jobs:
         channel: 'stable'
         
     - name: Install dependencies
-      run: flutter pub get
-      
+      run: |
+        flutter pub get
+        flutter doctor
+        
     - name: Build web
-      run: flutter build web --release
-      
+      run: |
+        flutter build web --release --web-renderer html
+        
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/web
+        cname: # Deixe vazio para usar o domínio padrão
