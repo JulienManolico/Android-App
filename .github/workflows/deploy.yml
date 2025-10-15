@@ -19,10 +19,13 @@ jobs:
         channel: 'stable'
         
     - name: Install dependencies
-      run: flutter pub get || true
+      run: |
+        flutter pub get
+        flutter pub deps
         
     - name: Build web
-      run: flutter build web --release
+      run: |
+        flutter build web --release --web-renderer html
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
