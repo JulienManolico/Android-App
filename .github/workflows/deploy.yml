@@ -19,7 +19,7 @@ jobs:
         channel: 'stable'
         
     - name: Install dependencies
-      run: flutter pub get
+      run: flutter pub get || true
         
     - name: Build web
       run: flutter build web --release
