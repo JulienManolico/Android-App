@@ -3,6 +3,5 @@ dependency_overrides:
   # Force compatible versions
   characters: ^1.3.0
   meta: ^1.9.1
-  material_color_utilities: ^0.2.0
   supabase: ^2.6.3
   supabase_flutter: ^2.8.4
