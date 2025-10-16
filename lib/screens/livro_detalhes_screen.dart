@@ -92,7 +92,7 @@ class _LivroDetalhesScreenState extends State<LivroDetalhesScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Deseja reservar o livro:'),
+            const Text('Deseja reservar o livro:'),
             const SizedBox(height: 8),
             Text(
               '"${widget.livro.liTitulo}"',
