@@ -37,6 +37,9 @@ dependencies:
   
   # Supabase dependencies
   supabase_flutter: ^2.8.4
+  
+  # Material Design dependencies
+  material_color_utilities: ^0.2.0
 
 dev_dependencies:
   flutter_test:

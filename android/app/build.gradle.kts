@@ -6,9 +6,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.flutter_application_1"
+    namespace = "com.biblioteca.app"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
