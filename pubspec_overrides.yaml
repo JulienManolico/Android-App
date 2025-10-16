@@ -1,7 +1,0 @@
-# Override dependencies to resolve conflicts
-dependency_overrides:
-  # Force compatible versions
-  characters: ^1.3.0
-  meta: ^1.9.1
-  supabase: ^2.6.3
-  supabase_flutter: ^2.8.4
