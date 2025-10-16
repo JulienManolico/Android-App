@@ -1,0 +1,4 @@
+# Override dependencies to exclude problematic plugins
+dependency_overrides:
+  # Exclude app_links plugin that causes build issues
+  app_links: null
